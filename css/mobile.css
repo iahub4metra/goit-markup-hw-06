@@ -30,7 +30,7 @@ a {
 }
 
 .section {
-    padding: 120px 0;
+    padding: 96px 0;
 }
 
 ul,
@@ -52,7 +52,6 @@ p {
 
 .container {
     max-width: 320px;
-    min-width: 320px;
     padding: 0 16px;
     margin-left: auto;
     margin-right: auto;
@@ -62,16 +61,18 @@ p {
 /* ====================== Header ============================= */
 .page-header {
     border-bottom: 1px solid var(--CORNFLOWER, #e7e9fc);
-    padding: 16px;
+    padding: 16px 0;
     box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08)
 }
 
 .nav-list {
     display: none;
+    gap: 40px;
 }
 
-.address-main {
+.address-list {
     display: none;
+    gap: 40px;
 }
 
 .page-header .container {
@@ -124,12 +125,21 @@ p {
     background-image: linear-gradient(to bottom,
             rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
-        url(../images/hero-image.jpg);
+        url(../images/mobile-bg-image.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     max-width: 320px;
     margin: 0 auto;
+}
+
+@media (min-resolution:192dpi) {
+    .hero-image {
+        background-image: linear-gradient(to bottom,
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/mobile-bg-image@2x.jpg);
+    }
 }
 
 .hero-image-title {
@@ -139,6 +149,7 @@ p {
     letter-spacing: 0.02em;
     color: #fff;
     text-align: center;
+    margin: 0 auto;
     margin-bottom: 72px;
     max-width: 288px;
 }
@@ -709,4 +720,215 @@ p {
     border: none;
     background-color: #404BBF;
     fill: #f4f4fd;
+}
+
+/* ============================ Mobile Menu =================================== */
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #FFF;
+    padding: 72px 24px 40px 16px;
+    transition:
+        opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.btn-close-mobile {
+    border-radius: 50%;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.nav-item-mobile:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.nav-link-mobile {
+    color: var(--NAVY-BLUE, #2E2F42);
+    font-family: Roboto;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+}
+
+.active-mobile {
+    color: #404BBF;
+}
+
+.address-list-mobile {
+    margin-bottom: 48px;
+}
+
+.address-item-mobile:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.address-link-mobile {
+    color: var(--SLATE, #434455);
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+
+.social-list-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+
+/* ======================= TABLET=============================== */
+@media screen and (min-width:768px) {
+    .container {
+        max-width: 768px;
+    }
+
+    /* ============= Header ============== */
+    .page-header {
+        padding: 0;
+    }
+
+    .nav-header {
+        display: flex;
+        align-items: center;
+    }
+
+    .page-header .logo {
+        padding: 24px 0;
+        margin-right: 120px;
+    }
+
+    .nav-list {
+        display: flex;
+    }
+
+    .nav-list-link {
+        color: #2e2f42;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        padding: 24px 0;
+        position: relative;
+    }
+
+    .active {
+        color: #404bbf;
+    }
+
+    .active::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background: var(--OCEAN, #404BBF);
+    }
+
+    .address-main {
+        font-style: normal;
+    }
+
+    .address-list {
+        display: inline;
+    }
+
+    .address-list li:not(:last-child) {
+        margin-bottom: 12px;
+    }
+
+    .address-list-link {
+        color: #434455;
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        line-height: 1.16666667;
+    }
+
+    .btn-mobile-menu {
+        display: none;
+    }
+
+    /* ========= Section 1 ========== */
+    .hero-image {
+        background-image: linear-gradient(to bottom,
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/tablet-bg.jpg);
+        max-width: 768px;
+        padding: 112px 0;
+    }
+
+    @media (min-resolution: 192dpi) {
+        .hero-image {
+            background-image: linear-gradient(to bottom,
+                    rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)),
+                url(../images/tablet-bg@2x.jpg);
+        }
+    }
+
+    .hero-image-title {
+        font-size: 56px;
+        line-height: 1.07142857;
+        margin-bottom: 36px;
+        max-width: 496px;
+
+    }
+
+    /* ============ Section 2 ============== */
+
+    .feature-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 72px 24px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .feature-item {
+        flex-basis: calc((100% - 24px) / 2);
+    }
+
+    .feature-item:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    .feature-title {
+        text-align: start;
+    }
 }
