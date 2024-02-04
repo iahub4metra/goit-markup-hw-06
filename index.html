@@ -38,6 +38,64 @@
                 </svg>
             </button>
         </div>
+        <div class="mobile-menu">
+            <div>
+                <button class="btn-close-mobile">
+                    <svg class="close-icon-mobile" width="8" height="8">
+                        <use href="./images/icons.svg#close-black-18dp-2-1"></use>
+                    </svg>
+                </button>
+                <nav>
+                    <ul class="nav-list-mobile">
+                        <li class="nav-item-mobile"><a class="nav-link-mobile active-mobile"
+                                href="./index.html">Studio</a></li>
+                        <li class="nav-item-mobile"><a class="nav-link-mobile" href="">Portfolio</a></li>
+                        <li class="nav-item-mobile"><a class="nav-link-mobile" href="">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <address>
+                    <ul class="address-list-mobile">
+                        <li class="address-item-mobile"><a class="address-link-mobile"
+                                href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                        <li class="address-item-mobile"><a class="address-link-mobile" href="tel:+110001111111">+11
+                                (000) 111-11-11</a></li>
+                    </ul>
+                </address>
+                <ul class="social-list-mobile">
+                    <li>
+                        <a class="link-svg" href="">
+                            <svg class="icon-link" width="24" height="24">
+                                <use href="./images/icons.svg#instagram-2"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="link-svg" href="">
+                            <svg class="icon-link" width="24" height="24">
+                                <use href="./images/icons.svg#twitter-1"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="link-svg" href="">
+                            <svg class="icon-link" width="24" height="24">
+                                <use href="./images/icons.svg#facebook-1"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="link-svg" href="">
+                            <svg class="icon-link" width="24" height="24">
+                                <use href="./images/icons.svg#linkedin-1"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
     </header>
     <!-- Main Page -->
     <main>
@@ -122,7 +180,8 @@
                 <ul class="team-list">
                     <!-- team card 1 -->
                     <li class="team-section-list-item">
-                        <img src="./images/img-1.jpg" alt="Mark Guerrero" width="264" height="260">
+                        <img srcset="./images/team-card-1.jpg 1x, ./images/team-card-1@2x.jpg 2x"
+                            src="./images/img-1.jpg" alt="Mark Guerrero" width="264" height="260">
                         <!-- card 1 content -->
                         <div class="team-card-text">
                             <h3 class="team-section-name">Mark Guerrero</h3>
@@ -162,7 +221,8 @@
                     </li>
                     <!-- team card 2 -->
                     <li class="team-section-list-item">
-                        <img src="./images/img-2.jpg" alt="Tom Ford" width="264" height="260">
+                        <img srcset="./images/team-card-2.jpg 1x, ./images/team-card-2@2x.jpg 2x"
+                            src="./images/img-2.jpg" alt="Tom Ford" width="264" height="260">
                         <!-- card 2 content -->
                         <div class="team-card-text">
                             <h3 class="team-section-name">Tom Ford</h3>
@@ -201,7 +261,8 @@
                     </li>
                     <!-- team card 3 -->
                     <li class="team-section-list-item">
-                        <img src="./images/img-3.jpg" alt="Camila Garcia" width="264" height="260">
+                        <img srcset="./images/team-card-3.jpg 1x, ./images/team-card-3@2x.jpg 2x"
+                            src="./images/img-3.jpg" alt="Camila Garcia" width="264" height="260">
                         <!-- card 3 content -->
                         <div class="team-card-text">
                             <h3 class="team-section-name">Camila Garcia</h3>
@@ -240,7 +301,8 @@
                     </li>
                     <!-- team card 4 -->
                     <li class="team-section-list-item">
-                        <img src="./images/img-4.jpg" alt="Daniel Wilson" width="264" height="260">
+                        <img srcset="./images/team-card-4.jpg 1x, ./images/team-card-4@2x.jpg 2x"
+                            src="./images/img-4.jpg" alt="Daniel Wilson" width="264" height="260">
                         <!-- card 4 content -->
                         <div class="team-card-text">
                             <h3 class="team-section-name">Daniel Wilson</h3>
@@ -288,7 +350,19 @@
                     <!-- project card 1 -->
                     <li class="project-card">
                         <div class="project-card-img-container">
-                            <img class="project-card-img" src="./images/img-5.jpg" alt="Banking App" width="360">
+                            <picture>
+                                <!-- Mobile -->
+                                <source media="(max-width:767px)"
+                                    srcset="./images/portfolio/mobile-portfolio-1.jpg 1x, ./images/portfolio/mobile-portfolio-1@2x.jpg 2x">
+                                <img class="project-card-img" src="./images/portfolio/mobile-portfolio-1.jpg"
+                                    alt="Banking App" width="360">
+                                <!-- Tablet -->
+                                <source media="(min-width:768px)"
+                                    srcset="./images/portfolio/tablet-portfolio-1.jpg 1x, ./images/portfolio/tablet-portfolio-1@2x.jpg 2x">
+                                <!-- Desktop -->
+                                <source media="(min-width:1158px)"
+                                    srcset="./images/portfolio/desktop-portfolio-1.jpg 1x, ./images/portfolio/desktop-portfolio-1@2x.jpg 2x">
+                            </picture>
                             <p class="overlay-text">14 Stylish and User-Friendly App Design Concepts · Task Manager
                                 App · Calorie Tracker
                                 App
@@ -304,7 +378,19 @@
                     <!-- project card 2 -->
                     <li class="project-card">
                         <div class="project-card-img-container">
-                            <img class="project-card-img" src="./images/img-6.jpg" alt="Cashless Payment" width="360">
+                            <picture>
+                                <!-- Mobile -->
+                                <source media="(max-width:767px)"
+                                    srcset="./images/portfolio/mobile-portfolio-2.jpg 1x, ./images/portfolio/mobile-portfolio-2@2x.jpg 2x">
+                                <img class="project-card-img" src="./images/portfolio/mobile-portfolio-2.jpg"
+                                    alt="Cashless Payment" width="360">
+                                <!-- Tablet -->
+                                <source media="(min-width:768px)"
+                                    srcset="./images/portfolio/tablet-portfolio-2.jpg 1x, ./images/portfolio/tablet-portfolio-2@2x.jpg 2x">
+                                <!-- Desktop -->
+                                <source media="(min-width:1158px)"
+                                    srcset="./images/portfolio/desktop-portfolio-2.jpg 1x, ./images/portfolio/desktop-portfolio-2@2x.jpg 2x">
+                            </picture>
                             <p class="overlay-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App
                                 · Calorie Tracker
                                 App
@@ -319,7 +405,19 @@
                     <!-- project card 3 -->
                     <li class="project-card">
                         <div class="project-card-img-container">
-                            <img class="project-card-img" src="./images/img-7.jpg" alt="Meditation App" width="360">
+                            <picture>
+                                <!-- Mobile -->
+                                <source media="(max-width:767px)"
+                                    srcset="./images/portfolio/mobile-portfolio-3.jpg 1x, ./images/portfolio/mobile-portfolio-3@2x.jpg 2x">
+                                <img class="project-card-img" src="./images/portfolio/mobile-portfolio-3.jpg"
+                                    alt="Meditation App" width="360">
+                                <!-- Tablet -->
+                                <source media="(min-width:768px)"
+                                    srcset="./images/portfolio/tablet-portfolio-3.jpg 1x, ./images/portfolio/tablet-portfolio-3@2x.jpg 2x">
+                                <!-- Desktop -->
+                                <source media="(min-width:1158px)"
+                                    srcset="./images/portfolio/desktop-portfolio-3.jpg 1x, ./images/portfolio/desktop-portfolio-3@2x.jpg 2x">
+                            </picture>
                             <p class="overlay-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App
                                 · Calorie Tracker
                                 App
@@ -334,7 +432,19 @@
                     <!-- project card 4 -->
                     <li class="project-card">
                         <div class="project-card-img-container">
-                            <img class="project-card-img" src="./images/img-8.jpg" alt="Taxi Service" width="360">
+                            <picture>
+                                <!-- Mobile -->
+                                <source media="(max-width:767px)"
+                                    srcset="./images/portfolio/mobile-portfolio-4.jpg 1x, ./images/portfolio/mobile-portfolio-4@2x.jpg 2x">
+                                <img class="project-card-img" src="./images/portfolio/mobile-portfolio-4.jpg"
+                                    alt="Taxi Service" width="360">
+                                <!-- Tablet -->
+                                <source media="(min-width:768px)"
+                                    srcset="./images/portfolio/tablet-portfolio-4.jpg 1x, ./images/portfolio/tablet-portfolio-4@2x.jpg 2x">
+                                <!-- Desktop -->
+                                <source media="(min-width:1158px)"
+                                    srcset="./images/portfolio/desktop-portfolio-4.jpg 1x, ./images/portfolio/desktop-portfolio-4@2x.jpg 2x">
+                            </picture>
                             <p class="overlay-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App
                                 · Calorie Tracker
                                 App
@@ -349,8 +459,19 @@
                     <!-- project card 5 -->
                     <li class="project-card">
                         <div class="project-card-img-container">
-                            <img class="project-card-img" src="./images/img-9.jpg" alt="Screen Illustrations"
-                                width="360">
+                            <picture>
+                                <!-- Mobile -->
+                                <source media="(max-width:767px)"
+                                    srcset="./images/portfolio/mobile-portfolio-5.jpg 1x, ./images/portfolio/mobile-portfolio-5@2x.jpg 2x">
+                                <img class="project-card-img" src="./images/portfolio/mobile-portfolio-5.jpg"
+                                    alt="Screen Illustrations" width="360">
+                                <!-- Tablet -->
+                                <source media="(min-width:768px)"
+                                    srcset="./images/portfolio/tablet-portfolio-5.jpg 1x, ./images/portfolio/tablet-portfolio-5@2x.jpg 2x">
+                                <!-- Desktop -->
+                                <source media="(min-width:1158px)"
+                                    srcset="./images/portfolio/desktop-portfolio-5.jpg 1x, ./images/portfolio/desktop-portfolio-5@2x.jpg 2x">
+                            </picture>
                             <p class="overlay-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App
                                 · Calorie Tracker
                                 App
@@ -365,7 +486,19 @@
                     <!-- project card 6 -->
                     <li class="project-card">
                         <div class="project-card-img-container">
-                            <img class="project-card-img" src="./images/img-10.jpg" alt="Online Courses" width="360">
+                            <picture>
+                                <!-- Mobile -->
+                                <source media="(max-width:767px)"
+                                    srcset="./images/portfolio/mobile-portfolio-6.jpg 1x, ./images/portfolio/mobile-portfolio-6@2x.jpg 2x">
+                                <img class="project-card-img" src="./images/portfolio/mobile-portfolio-6.jpg"
+                                    alt="Online Courses" width="360">
+                                <!-- Tablet -->
+                                <source media="(min-width:768px)"
+                                    srcset="./images/portfolio/tablet-portfolio-6.jpg 1x, ./images/portfolio/tablet-portfolio-6@2x.jpg 2x">
+                                <!-- Desktop -->
+                                <source media="(min-width:1158px)"
+                                    srcset="./images/portfolio/desktop-portfolio-6.jpg 1x, ./images/portfolio/desktop-portfolio-6@2x.jpg 2x">
+                            </picture>
                             <p class="overlay-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App
                                 · Calorie Tracker
                                 App
@@ -441,7 +574,7 @@
         </div>
     </footer>
     <!-- ========= Modal ========= -->
-    <div class="backdrop is-open">
+    <div class="backdrop">
         <div class="overlay-container-hero">
             <button class="overlay-btn" type="button">
                 <svg class="icon-close" width="8" height="8">
