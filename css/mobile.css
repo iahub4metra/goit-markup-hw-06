@@ -451,6 +451,7 @@ p {
     width: 288px;
     height: 40px;
     outline: transparent;
+    opacity: 0.3;
 }
 
 .footer-input::placeholder {
@@ -458,6 +459,7 @@ p {
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
+    opacity: 0.6;
 }
 
 .btn-form-footer {
@@ -931,4 +933,235 @@ p {
     .feature-title {
         text-align: start;
     }
+
+    /* ============== Section 3 ================= */
+    .team-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 64px 24px;
+        justify-content: center;
+    }
+
+    .team-section-list-item {
+        margin: 0;
+    }
+
+    .team-section-list-item:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    /* ============= Section 4 =============== */
+    .portfolio-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 72px 24px;
+        justify-content: center;
+    }
+
+    .project-card {
+        width: 356px;
+    }
+
+    .project-card:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    /* ============= Footer ================ */
+    .footer .container {
+        padding-left: 108px;
+    }
+
+    .footer-text-container {
+        display: flex;
+        gap: 24px;
+        margin-bottom: 72px;
+    }
+
+    .footer .logo {
+        text-align: start;
+    }
+
+    .logo-container {
+        margin-bottom: 0;
+    }
+
+    .social-link-text {
+        text-align: start;
+    }
+
+    .social-links-container {
+        margin-bottom: 0;
+    }
+
+    .footer-form-text {
+        text-align: start;
+    }
+
+    .footer-form {
+        display: inline;
+    }
+
+    .footer-input {
+        width: 264px;
+        margin-right: 24px;
+    }
+
+    /* =========== Modal ============== */
+    .overlay-container-hero {
+        width: 408px;
+        min-height: 584px;
+        padding: 72px 25px 24px 23px;
+    }
+}
+
+/* ================== DESKTOP ======================= */
+@media screen and (min-width:1158px) {
+    .container {
+        max-width: 1158px;
+        padding: 0 15px;
+    }
+
+    .section {
+        padding: 120px 0;
+    }
+
+    /* ============ Header ================ */
+    .page-header .logo {
+        margin-right: 76px;
+    }
+
+    .nav-list-link {
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav-list-link:hover,
+    .nav-list-link:focus {
+        color: #404bbf;
+    }
+
+    .address-list {
+        display: flex;
+        gap: 40px;
+    }
+
+    .address-list li:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    .address-list-link {
+        color: #434455;
+        font-size: 16px;
+        letter-spacing: 0.02em;
+        line-height: 1.5;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .address-list-link:hover,
+    .address-list-link:focus {
+        color: #404bbf;
+    }
+
+    /* ========== Section 1========== */
+    .hero-image {
+        background-image: linear-gradient(to bottom,
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/desktop-bg.jpg);
+        max-width: 1440px;
+        padding: 188px 0;
+    }
+
+    @media (min-resolution:192dpi) {
+        .hero-image {
+            background-image: linear-gradient(to bottom,
+                    rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)),
+                url(../images/desktop-bg@2x.jpg);
+        }
+    }
+
+    .hero-image-title {
+        margin-bottom: 48px;
+    }
+
+    /* =========== Section 2============ */
+    .feature-list {
+        flex-wrap: nowrap;
+        gap: 24px;
+    }
+
+    .feature-item {
+        flex-basis: calc((100% - 72px) / 4);
+    }
+
+    .feature-title {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+
+    .feature-text {
+        font-weight: 400;
+    }
+
+    .svg-icon {
+        padding: 24px 100px;
+        border-radius: 4px;
+        border: 1px solid var(--LIGHT-SLATE, #8E8F99);
+        background: var(--CLOUD, #F4F4FD);
+        width: 264px;
+        height: 112px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 8px;
+    }
+
+    /* ============ Section 3 ============ */
+    .team-list {
+        flex-wrap: nowrap;
+        gap: 24px;
+    }
+
+    /* ============= Section 4 =============== */
+    .portfolio-list {
+        gap: 48px 24px;
+    }
+
+    .project-card {
+        width: calc((100% - 48px) / 3);
+    }
+
+    /* =============== Footer =================== */
+    .footer {
+        padding: 100px 0;
+    }
+
+    .footer .container {
+        padding-left: 15px;
+        display: flex;
+        align-items: baseline;
+    }
+
+    .footer-text-container {
+        gap: 0;
+        margin-bottom: 0;
+    }
+
+    .logo-container {
+        margin-right: 120px;
+    }
+
+    .form-container {
+        margin-left: auto;
+    }
+
+    .footer-input {
+        opacity: 1;
+    }
+
+    .footer-input::placeholder {
+        opacity: 1;
+    }
+
 }
