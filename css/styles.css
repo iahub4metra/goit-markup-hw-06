@@ -628,6 +628,10 @@ p {
     border-color: #4D5AE5;
 }
 
+.textarea-container {
+    margin-bottom: 16px;
+}
+
 .text-form-overlay {
     resize: none;
     width: 100%;
@@ -799,6 +803,7 @@ p {
 .address-link-mobile {
     color: var(--SLATE, #434455);
     font-family: Roboto;
+    font-style: normal;
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
